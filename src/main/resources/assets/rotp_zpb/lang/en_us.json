@@ -1,0 +1,11 @@
+{
+  "entity.rotp_item_stand.item_stand": "Item Stand",
+  "stand.rotp_item_stand.item_stand": "Item Stand",
+
+  "item.rotp_item_stand.stand_item": "Item Stand",
+  
+  "action.rotp_item_stand.give_item": "Summon Item Stand",
+
+  "rotp_item_stand.subtitle.user": "\"Item Stand\""
+
+}

@@ -1,0 +1,10 @@
+{
+
+  "user_item_stand": {
+    "subtitle": "rotp_item_stand.subtitle.user",
+    "sounds": [ "rotp_item_stand:user/cs_user"]
+  },
+  "void":{
+    "sounds": [ "rotp_item_stand:void"]
+  }
+}
