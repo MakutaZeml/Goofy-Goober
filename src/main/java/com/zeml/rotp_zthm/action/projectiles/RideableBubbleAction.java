@@ -7,8 +7,10 @@ import com.github.standobyte.jojo.action.stand.StandEntityAction;
 import com.github.standobyte.jojo.entity.stand.StandEntity;
 import com.github.standobyte.jojo.entity.stand.StandEntityTask;
 import com.github.standobyte.jojo.power.impl.stand.IStandPower;
+import com.zeml.rotp_zthm.client.playeranim.anim.HamonPlayerAnimations;
 import com.zeml.rotp_zthm.entity.projectile.RideableBubble;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.world.World;
 
 import java.util.HashMap;
@@ -48,5 +50,14 @@ public class RideableBubbleAction extends StandEntityAction {
                 HamonBubbleLauncher.consumeSoap(userPower.getUser(), 50);
             }
         }
+    }
+
+    public boolean clHeldStartAnim(PlayerEntity user) {
+        return HamonPlayerAnimations.rideBubble.setWindupAnim(user);
+    }
+
+    @Override
+    public void clHeldStopAnim(PlayerEntity user) {
+        HamonPlayerAnimations.rideBubble.stopAnim(user);
     }
 }

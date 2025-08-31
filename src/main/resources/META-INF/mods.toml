@@ -19,7 +19,7 @@ modId="rotp_zthm" #mandatory
 # The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
 # ${file.jarVersion} will substitute the value of the Implementation-Version as read from the mod's JAR file metadata
 # see the associated build.gradle script for how to populate this completely automatically during a build
-version="1.0" #mandatory
+version="0.1" #mandatory
  # A display name for the mod
 displayName="RotP Extra Hamon Stands" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification https://mcforge.readthedocs.io/en/latest/gettingstarted/autoupdate/
@@ -34,8 +34,7 @@ logoFile="logo.png" #optional
 authors="Makuta Zeml, StandoByte" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-An addon for Ripples of the Past mod, adding a new Custom Stand - Peanut Boy.
-'''
+An addon for Ripples of the Past mod, adding a new Custom Stand to Stand techniques: Caesar-Goofy Goober, Lisa Lisa-Comming Soon and Will A Zeppeli: Coming Soon'''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.rotp_zthm]] #optional
     # the modid of the dependency

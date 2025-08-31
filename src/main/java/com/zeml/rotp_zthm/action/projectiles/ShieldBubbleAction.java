@@ -10,10 +10,12 @@ import com.github.standobyte.jojo.entity.stand.StandEntity;
 import com.github.standobyte.jojo.entity.stand.StandEntityTask;
 import com.github.standobyte.jojo.item.TommyGunItem;
 import com.github.standobyte.jojo.power.impl.stand.IStandPower;
+import com.zeml.rotp_zthm.client.playeranim.anim.HamonPlayerAnimations;
 import com.zeml.rotp_zthm.entity.projectile.ShieldBubble;
 import com.zeml.rotp_zthm.init.InitStands;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.MoverType;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.world.World;
@@ -70,5 +72,13 @@ public class ShieldBubbleAction extends StandEntityAction {
         }
     }
 
+    @Override
+    public boolean clHeldStartAnim(PlayerEntity user) {
+        return HamonPlayerAnimations.bubbleShield.setWindupAnim(user);
+    }
 
+    @Override
+    public void clHeldStopAnim(PlayerEntity user) {
+        HamonPlayerAnimations.bubbleShield.stopAnim(user);
+    }
 }

@@ -1,0 +1,40 @@
+{
+  "entity.rotp_zthm.goofy_goober": "Goofy Goober Stand",
+  "stand.rotp_zthm.goofy_goober": "Goofy Goober Stand",
+
+  "item.rotp_zthm.stand_gloves": "Goofy Goober",
+
+  "action.rotp_zthm.redirect_bubble": "Redirigir Burbujas",
+  "action.rotp_zthm.lock_bubble": "Fijar burbujas en su lugar",
+  "action.rotp_zthm.redirect_target_bubble": "Redirigir Burbujas a objetivo",
+  "action.rotp_zthm.bubble_launcher": "Lanzador de burbujas Stand",
+  "action.rotp_zthm.bubble_cutter": "Cortador de burbujas Stand",
+  "action.rotp_zthm.bubble_cutter_gliding": "Cortador de burbujas deslizante Stand",
+  "action.rotp_zthm.pop_bubble": "Reventar Burbujas",
+  "action.rotp_zthm.shield": "Escudo Burbuja",
+  "action.rotp_zthm.shield_target": "Escudo Burbuja a objetivo",
+
+  "action.rotp_zthm.stand_breath": "Respiración Hamon",
+  "action.rotp_zthm.control_bubble": "Obtener control de burbujas",
+  "action.rotp_zthm.ride_bubble": "Burbuja Montable",
+  "action.rotp_zthm.pick_items_bubble": "Burbuja agarrona",
+
+  "rotp_zthm.subtitle.summon_gg": "Invocación de Goofy Goober",
+  "rotp_zthm.subtitle.unsummon_gg": "Desinvocación Goofy Goober",
+
+  "entity.rotp_zthm.ride_bubble": "Burbuja montable",
+  "entity.rotp_zthm.pick_item_bubble": "Burbuja metiche",
+  "entity.rotp_zthm.hamon_bubble": "Burbuja",
+  "entity.rotp_zthm.hamon_bubble_cutter": "Cortador de burbujas",
+  "entity.rotp_zthm.shield_bubble": "Escudo burbuja",
+
+  "zeml.story.hamon": "Stands de Hamon Originales",
+
+  "jojo.message.action_condition.stand_gloves": "Necesitas tus guantes Stands",
+
+  "rotp_zthm.config.hamonToStand": "El Hamon da Stand",
+  "rotp_zthm.config.control": "Nivel de control de Hamon requerido",
+  "rotp_zthm.config.strength": "Nivel de fuerza de Hamon requerido",
+  "rotp_zthm.config.breathing": "Nivel de respiración de Hamon requerido"
+
+}

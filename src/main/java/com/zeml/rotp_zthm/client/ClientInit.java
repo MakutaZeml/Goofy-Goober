@@ -1,7 +1,10 @@
 package com.zeml.rotp_zthm.client;
 
 import com.github.standobyte.jojo.client.ClientUtil;
+import com.github.standobyte.jojo.client.render.armor.ArmorModelRegistry;
+import com.zeml.rotp_zhp.client.playeranim.anim.AddonPlayerAnimations;
 import com.zeml.rotp_zthm.ExtraHamonStandsAddon;
+import com.zeml.rotp_zthm.client.playeranim.anim.HamonPlayerAnimations;
 import com.zeml.rotp_zthm.client.render.entity.renderer.projectiles.*;
 import com.zeml.rotp_zthm.client.render.entity.renderer.stand.GoofyGooberRenderer;
 import com.zeml.rotp_zthm.init.AddonStands;
@@ -11,6 +14,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.item.IItemPropertyGetter;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.ParticleFactoryRegisterEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -42,6 +46,11 @@ public class ClientInit {
         Minecraft mc = Minecraft.getInstance();
 
 
+    }
+
+    @SubscribeEvent(priority = EventPriority.LOW)
+    public static void loadCustomArmorModels(FMLClientSetupEvent event) {
+        event.enqueueWork(HamonPlayerAnimations::init);
     }
 
 }

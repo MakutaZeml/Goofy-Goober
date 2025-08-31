@@ -19,14 +19,14 @@
   "action.rotp_zthm.ride_bubble": "Rideable Bubble",
   "action.rotp_zthm.pick_items_bubble": "Picky Bubbles",
 
-  "rotp_zthm.subtitle.summon": "Goofy Goober Summon",
-
-  "rotp_zthm.subtitle.user": "\"Goofy Goober\"",
+  "rotp_zthm.subtitle.summon_gg": "Goofy Goober Summon",
+  "rotp_zthm.subtitle.unsummon_gg": "Goofy Goober Unsummom",
 
   "entity.rotp_zthm.ride_bubble": "Rideable Bubble",
   "entity.rotp_zthm.pick_item_bubble": "Picky Bubble",
   "entity.rotp_zthm.hamon_bubble": "Bubble",
   "entity.rotp_zthm.hamon_bubble_cutter": "Bubble Cutter",
+  "entity.rotp_zthm.shield_bubble": "Shield Bubble",
 
   "zeml.story.hamon": "Custom Hamon Stands",
 
@@ -35,6 +35,6 @@
   "rotp_zthm.config.hamonToStand": "Hamon gives Stand",
   "rotp_zthm.config.control": "Hamon control required",
   "rotp_zthm.config.strength": "Hamon strenght required",
-  "rotp_zthm.config.breathing": "Hamon strenght breathing"
+  "rotp_zthm.config.breathing": "Hamon breathing required"
 
 }

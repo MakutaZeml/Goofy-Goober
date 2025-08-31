@@ -12,14 +12,14 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class InitSounds {
     public static final DeferredRegister<SoundEvent> SOUNDS = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, ExtraHamonStandsAddon.MOD_ID);
 
-    public static final RegistryObject<SoundEvent> GOOFY_GOOBER_SUMMON = SOUNDS.register("summon",
-            ()->new SoundEvent(new ResourceLocation(ExtraHamonStandsAddon.MOD_ID,"summon")));
+    public static final RegistryObject<SoundEvent> GOOFY_GOOBER_SUMMON = SOUNDS.register("summon_gg",
+            ()->new SoundEvent(new ResourceLocation(ExtraHamonStandsAddon.MOD_ID,"summon_gg")));
 
     public static final RegistryObject<SoundEvent> VOID =SOUNDS.register("void",
             ()->new SoundEvent(new ResourceLocation(ExtraHamonStandsAddon.MOD_ID,"void")));
 
-    public static final RegistryObject<SoundEvent> GOOFY_GOOBER_UNSUMMON = SOUNDS.register("unsummon",
-            ()->new SoundEvent(new ResourceLocation(ExtraHamonStandsAddon.MOD_ID,"unsummon")));
+    public static final RegistryObject<SoundEvent> GOOFY_GOOBER_UNSUMMON = SOUNDS.register("unsummon_gg",
+            ()->new SoundEvent(new ResourceLocation(ExtraHamonStandsAddon.MOD_ID,"unsummon_gg")));
 
 
     public static final RegistryObject<SoundEvent> GOOFY_GOOBER_STAND = SOUNDS.register("user_item_stand",
