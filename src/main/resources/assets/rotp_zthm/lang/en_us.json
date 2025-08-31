@@ -1,0 +1,40 @@
+{
+  "entity.rotp_zthm.goofy_goober": "Goofy Goober Stand",
+  "stand.rotp_zthm.goofy_goober": "Goofy Goober Stand",
+
+  "item.rotp_zthm.stand_gloves": "Goofy Goober",
+
+  "action.rotp_zthm.redirect_bubble": "Redirect bubbles",
+  "action.rotp_zthm.lock_bubble": "Lock in position bubbles",
+  "action.rotp_zthm.redirect_target_bubble": "Redirect bubbles to a Target",
+  "action.rotp_zthm.bubble_launcher": "Stand Bubble Launcher",
+  "action.rotp_zthm.bubble_cutter": "Stand Bubble Cutter",
+  "action.rotp_zthm.bubble_cutter_gliding": "Stand Bubble Cutter Gliding",
+  "action.rotp_zthm.pop_bubble": "Pop Bubbles",
+  "action.rotp_zthm.shield": "Bubble Shield",
+  "action.rotp_zthm.shield_target": "Bubble Shield to Target",
+
+  "action.rotp_zthm.stand_breath": "Hamon Breath",
+  "action.rotp_zthm.control_bubble": "Get bubbles control",
+  "action.rotp_zthm.ride_bubble": "Rideable Bubble",
+  "action.rotp_zthm.pick_items_bubble": "Picky Bubbles",
+
+  "rotp_zthm.subtitle.summon": "Goofy Goober Summon",
+
+  "rotp_zthm.subtitle.user": "\"Goofy Goober\"",
+
+  "entity.rotp_zthm.ride_bubble": "Rideable Bubble",
+  "entity.rotp_zthm.pick_item_bubble": "Picky Bubble",
+  "entity.rotp_zthm.hamon_bubble": "Bubble",
+  "entity.rotp_zthm.hamon_bubble_cutter": "Bubble Cutter",
+
+  "zeml.story.hamon": "Custom Hamon Stands",
+
+  "jojo.message.action_condition.stand_gloves": "You need your Stand gloves",
+
+  "rotp_zthm.config.hamonToStand": "Hamon gives Stand",
+  "rotp_zthm.config.control": "Hamon control required",
+  "rotp_zthm.config.strength": "Hamon strenght required",
+  "rotp_zthm.config.breathing": "Hamon strenght breathing"
+
+}

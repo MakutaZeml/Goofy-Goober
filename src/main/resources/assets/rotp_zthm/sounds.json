@@ -1,0 +1,19 @@
+{
+  "summon": {
+    "subtitle": "rotp_zthm.subtitle.summon",
+    "sounds": ["rotp_zthm:summon_0","rotp_zthm:summon_1"]
+  },
+  "unsummon": {
+    "subtitle": "rotp_zthm.subtitle.summon",
+    "sounds": ["rotp_zthm:unsummon"]
+  },
+
+
+  "user_item_stand": {
+    "subtitle": "rotp_zthm.subtitle.user",
+    "sounds": [ "rotp_zthm:user/cs_user"]
+  },
+  "void":{
+    "sounds": [ "rotp_zthm:void"]
+  }
+}

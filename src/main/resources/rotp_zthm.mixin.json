@@ -1,0 +1,20 @@
+{
+  "required": false,
+  "package": "com.zeml.rotp_zthm.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "client": [
+    "GlovesLayerMixin"
+  ],
+  "server": [
+
+  ],
+  "injector": {
+    "defaultRequire": 1
+  },
+  "refmap": "rotp_zthm.mixins-refmap.json",
+  "mixins": [
+    "HamonBubbleLauncherMixin",
+    "HamonDataMixin",
+    "GameplayHandlerMixin"
+  ]
+}

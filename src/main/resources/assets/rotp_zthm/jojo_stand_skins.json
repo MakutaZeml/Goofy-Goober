@@ -1,0 +1,12 @@
+{
+  "skins": {
+    "rotp_zthm:green": {
+      "stand_type": "rotp_zthm:goofy_goober",
+      "color": "0x3CB371"
+    },
+    "rotp_zthm:power_glove": {
+      "stand_type": "rotp_zthm:goofy_goober",
+      "color": "0x007a87"
+    }
+  }
+}
