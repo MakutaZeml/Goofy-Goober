@@ -1,0 +1,40 @@
+{
+  "entity.rotp_zthm.goofy_goober": "高飞高伯",
+  "stand.rotp_zthm.goofy_goober": "高飞高伯",
+
+  "item.rotp_zthm.stand_gloves": "高飞高伯",
+
+  "action.rotp_zthm.redirect_bubble": "切换泡泡飞行方向",
+  "action.rotp_zthm.lock_bubble": "定住泡泡",
+  "action.rotp_zthm.redirect_target_bubble": "让泡泡飞向实体",
+  "action.rotp_zthm.bubble_launcher": "替身发射泡泡",
+  "action.rotp_zthm.bubble_cutter": "替身发射泡沫割刀",
+  "action.rotp_zthm.bubble_cutter_gliding": "替身发射滑行泡沫割刀",
+  "action.rotp_zthm.pop_bubble": "消除泡泡",
+  "action.rotp_zthm.shield": "泡泡护盾",
+  "action.rotp_zthm.shield_target": "给予泡泡屏障",
+
+  "action.rotp_zthm.stand_breath": "波纹呼吸",
+  "action.rotp_zthm.control_bubble": "控制泡泡",
+  "action.rotp_zthm.ride_bubble": "骑乘泡泡",
+  "action.rotp_zthm.pick_items_bubble": "取物泡泡",
+
+  "rotp_zthm.subtitle.summon_gg": "高飞高伯显形",
+  "rotp_zthm.subtitle.unsummon_gg": "收回高飞高伯",
+
+  "entity.rotp_zthm.ride_bubble": "大型泡泡",
+  "entity.rotp_zthm.pick_item_bubble": "取物泡泡",
+  "entity.rotp_zthm.hamon_bubble": "替身泡沫",
+  "entity.rotp_zthm.hamon_bubble_cutter": "替身泡沫割刀",
+  "entity.rotp_zthm.shield_bubble": "泡沫屏障",
+
+  "zeml.story.hamon": "二创波纹替身",
+
+  "jojo.message.action_condition.stand_gloves": "你需要手持高飞高伯",
+
+  "rotp_zthm.config.hamonToStand": "波纹是否可以给予替身",
+  "rotp_zthm.config.control": "波纹控制等级需求",
+  "rotp_zthm.config.strength": "波纹力量等级需求",
+  "rotp_zthm.config.breathing": "呼吸技巧等级需求"
+
+}

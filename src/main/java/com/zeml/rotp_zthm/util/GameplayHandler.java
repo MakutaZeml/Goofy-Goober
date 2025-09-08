@@ -30,6 +30,7 @@ import net.minecraft.nbt.NBTUtil;
 import net.minecraft.util.EntityPredicates;
 import net.minecraft.util.math.EntityRayTraceResult;
 import net.minecraft.util.math.RayTraceResult;
+import net.minecraftforge.common.ForgeMod;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.ProjectileImpactEvent;
@@ -37,6 +38,7 @@ import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 
 import java.util.Optional;
@@ -64,10 +66,12 @@ public class GameplayHandler {
                                             if(!playerData.isTriedHamonStand()){
                                                 if(hamon.characterIs(ModHamonSkills.CHARACTER_CAESAR.get())){
                                                     power.givePower(InitStands.GOOFY_GOOBER.getStandType());
-                                                }else {
+                                                    playerData.setTriedHamonStand(true);
+                                                }else if(ModList.get().isLoaded("rotp_zhp")){
                                                     power.givePower(com.zeml.rotp_zhp.init.InitStands.STAND_HERMITO_PURPLE.getStandType());
+                                                    playerData.setTriedHamonStand(true);
                                                 }
-                                                playerData.setTriedHamonStand(true);
+
                                             }
                                         });
                                     }

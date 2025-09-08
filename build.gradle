@@ -16,7 +16,7 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 apply plugin: 'org.spongepowered.mixin'
 
-version = '0.1'
+version = '0.2'
 group = 'com.zeml.rotp_zthm' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'RotP-Extra Hamon Stands'
 
