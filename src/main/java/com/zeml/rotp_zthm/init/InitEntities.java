@@ -34,5 +34,8 @@ public class InitEntities {
             () -> EntityType.Builder.<ShieldBubble>of(ShieldBubble::new, EntityClassification.MISC).sized(2.0F, 2.0F)
                     .build(new ResourceLocation(ExtraHamonStandsAddon.MOD_ID, "shield_bubble").toString()));
 
+    public static final RegistryObject<EntityType<SolarFlareEntity>> SOLAR_FLARE = ENTITIES.register("solar_flare",
+            () -> EntityType.Builder.<SolarFlareEntity>of(SolarFlareEntity::new, EntityClassification.MISC).sized(0.15F, 0.15F)
+                    .build(new ResourceLocation(ExtraHamonStandsAddon.MOD_ID, "solar_flare").toString()));
 
 }

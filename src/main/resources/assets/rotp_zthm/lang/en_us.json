@@ -1,6 +1,9 @@
 {
-  "entity.rotp_zthm.goofy_goober": "Goofy Goober Stand",
-  "stand.rotp_zthm.goofy_goober": "Goofy Goober Stand",
+  "entity.rotp_zthm.goofy_goober": "Goofy Goober",
+  "stand.rotp_zthm.goofy_goober": "Goofy Goober",
+
+  "entity.rotp_zthm.house_earth": "House of Earth",
+  "stand.rotp_zthm.house_earth": "House of Earth",
 
   "item.rotp_zthm.stand_gloves": "Goofy Goober",
 
@@ -13,14 +16,25 @@
   "action.rotp_zthm.pop_bubble": "Pop Bubbles",
   "action.rotp_zthm.shield": "Bubble Shield",
   "action.rotp_zthm.shield_target": "Bubble Shield to Target",
+  "action.rotp_zthm.hoe_punch": "Punch",
+  "action.rotp_zthm.hoe_barrage": "Barrage",
+  "action.rotp_zthm.hoe_barrage_flare": "Flare Barrage",
+  "action.rotp_zthm.hoe_combo": "Finisher OverDrive",
+  "action.rotp_zthm.hoe_heavy_punch": "Heavy Punch",
+  "action.rotp_zthm.hoe_wind": "Solar Wind",
+  "action.rotp_zthm.hoe_storm": "Solar Storm",
+  "action.rotp_zthm.hoe_block": "Block",
 
   "action.rotp_zthm.stand_breath": "Hamon Breath",
   "action.rotp_zthm.control_bubble": "Get bubbles control",
   "action.rotp_zthm.ride_bubble": "Rideable Bubble",
   "action.rotp_zthm.pick_items_bubble": "Picky Bubbles",
+  "action.rotp_zthm.house_earth": "Block",
 
   "rotp_zthm.subtitle.summon_gg": "Goofy Goober Summon",
   "rotp_zthm.subtitle.unsummon_gg": "Goofy Goober Unsummom",
+  "rotp_zthm.subtitle.summon_hoe": "House of Earth Summon",
+  "rotp_zthm.subtitle.unsummon_hoe": "Soud of Earth Unsummon",
 
   "entity.rotp_zthm.ride_bubble": "Rideable Bubble",
   "entity.rotp_zthm.pick_item_bubble": "Picky Bubble",
@@ -36,5 +50,7 @@
   "rotp_zthm.config.control": "Hamon control required",
   "rotp_zthm.config.strength": "Hamon strenght required",
   "rotp_zthm.config.breathing": "Hamon breathing required"
+
+
 
 }

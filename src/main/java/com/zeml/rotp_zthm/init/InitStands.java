@@ -1,15 +1,13 @@
 package com.zeml.rotp_zthm.init;
 
-import com.github.standobyte.jojo.action.stand.StandAction;
-import com.github.standobyte.jojo.action.stand.StandEntityAction;
+import com.github.standobyte.jojo.action.stand.*;
 import com.github.standobyte.jojo.entity.stand.StandPose;
 import com.github.standobyte.jojo.init.ModSounds;
-import com.zeml.rotp_zthm.action.HamonBreath;
-import com.zeml.rotp_zthm.action.ControlBubblesAction;
-import com.zeml.rotp_zthm.action.ExplodeBubblesAction;
-import com.zeml.rotp_zthm.action.RedirectBubbleTargetAction;
-import com.zeml.rotp_zthm.action.RedirectBubblesAction;
+import com.github.standobyte.jojo.power.impl.stand.StandInstance;
+import com.zeml.rotp_zthm.action.*;
 import com.zeml.rotp_zthm.action.projectiles.*;
+import com.zeml.rotp_zthm.action.punch.HOEFinisher;
+import com.zeml.rotp_zthm.action.punch.HOESolarWindAction;
 import com.zeml.rotp_zthm.entity.stands.GoofyGooberEntity;
 import com.zeml.rotp_zthm.ExtraHamonStandsAddon;
 import com.github.standobyte.jojo.power.impl.stand.stats.StandStats;
@@ -19,6 +17,7 @@ import com.github.standobyte.jojo.entity.stand.StandEntityType;
 import com.github.standobyte.jojo.init.power.stand.EntityStandRegistryObject;
 import com.github.standobyte.jojo.power.impl.stand.type.StandType;
 
+import com.zeml.rotp_zthm.entity.stands.HouseOfEarthEntity;
 import com.zeml.rotp_zthm.power.impl.stand.type.HamonStandType;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextFormatting;
@@ -39,8 +38,9 @@ public class InitStands {
 
     public static final RegistryObject<StandAction> STAND_BREATH =ACTIONS.register("stand_breath",
             ()-> new HamonBreath(new StandEntityAction.Builder().heldWalkSpeed(0.0F).holdType()
-                    .standSound(ModSounds.BREATH_CAESAR).standSound(ModSounds.HAMON_CONCENTRATION)
+                    .standSound(ModSounds.HAMON_CONCENTRATION)
             ));
+
 
     // ======================================== Goofy Goober ========================================
 
@@ -125,7 +125,7 @@ public class InitStands {
                                     RIDE_BUBBLE.get()
                             )
                             .defaultStats(StandStats.class, new StandStats.Builder()
-                                    .tier(2)
+                                    .tier(3)
                                     .power(6.0)
                                     .speed(5.0)
                                     .range(25.0)
@@ -143,4 +143,82 @@ public class InitStands {
                             .summonSound(InitSounds.GOOFY_GOOBER_SUMMON)
                             .unsummonSound(InitSounds.GOOFY_GOOBER_UNSUMMON))
                     .withDefaultStandAttributes();
+
+    // ======================================== House of Earth ========================================
+
+    public static final RegistryObject<StandEntityLightAttack> HOUSE_PUNCH = ACTIONS.register("hoe_punch",
+            () -> new StandEntityLightAttack(new StandEntityLightAttack.Builder()
+                    .punchSound(ModSounds.STAR_PLATINUM_PUNCH_LIGHT)
+                    .standSound(StandEntityAction.Phase.WINDUP, false, InitSounds.VOID)));
+
+    public static final RegistryObject<StandEntityMeleeBarrage> HOUSE_BARRAGE = ACTIONS.register("hoe_barrage",
+            () -> new StandEntityMeleeBarrage(new StandEntityMeleeBarrage.Builder()
+                    .barrageHitSound(ModSounds.STAR_PLATINUM_PUNCH_BARRAGE)
+                    .standSound(StandEntityAction.Phase.PERFORM, false, InitSounds.VOID)));
+
+    public static final RegistryObject<StandEntityMeleeBarrage> HOUSE_BARRAGE_FLARE = ACTIONS.register("hoe_barrage_flare",
+            () -> new HOESolarWindAction(new HOESolarWindAction.Builder().resolveLevelToUnlock(1)
+                    .barrageHitSound(ModSounds.STAR_PLATINUM_PUNCH_BARRAGE)
+                    .standSound(StandEntityAction.Phase.PERFORM, false, InitSounds.VOID)));
+
+    public static final RegistryObject<StandEntityHeavyAttack> HOUSE_COMBO = ACTIONS.register("hoe_combo",
+            () -> new HOEFinisher(new StandEntityHeavyAttack.Builder()
+                    .resolveLevelToUnlock(1)
+                    .standSound(StandEntityAction.Phase.WINDUP, false, InitSounds.VOID)
+                    .partsRequired(StandInstance.StandPart.ARMS),ModSounds.STAR_PLATINUM_PUNCH_HEAVY));
+
+
+    public static final RegistryObject<StandEntityAction> HOUSE_SOLAR_WIND = ACTIONS.register("hoe_wind",
+            ()-> new HOESolarStormAction(new StandEntityAction.Builder().holdType().staminaCostTick(15).resolveLevelToUnlock(3)
+                    .standOffsetFromUser(0,.5).cooldown(0,100,.6F)
+                    .standPose(HOESolarStormAction.BLOW).standWindupDuration(20)
+            )
+    );
+
+
+    public static final RegistryObject<StandEntityBlock> HOUSE_BLOCK = ACTIONS.register("hoe_block",
+            () -> new StandEntityBlock());
+    public static final RegistryObject<StandEntityHeavyAttack> HOUSE_HEAVY = ACTIONS.register("hoe_heavy_punch",
+            () -> new StandEntityHeavyAttack(new StandEntityHeavyAttack.Builder()
+                    .punchSound(ModSounds.STAR_PLATINUM_PUNCH_HEAVY)
+                    .standSound(StandEntityAction.Phase.WINDUP, false, InitSounds.VOID)
+                    .partsRequired(StandInstance.StandPart.ARMS)
+                    .setFinisherVariation(HOUSE_COMBO)
+                    .shiftVariationOf(HOUSE_PUNCH).shiftVariationOf(HOUSE_BARRAGE)));
+
+    public static final EntityStandRegistryObject<HamonStandType<StandStats>, StandEntityType<HouseOfEarthEntity>> HOUSE_EARTH =
+            new EntityStandRegistryObject<>("house_earth",
+                    STANDS,
+                    () -> new HamonStandType.Builder<StandStats>()
+                            .color(0xca422e)
+                            .storyPartName(SPECIAL_HAMON)
+                            .leftClickHotbar(
+                                    HOUSE_PUNCH.get(),
+                                    HOUSE_BARRAGE.get(),
+                                    HOUSE_BARRAGE_FLARE.get(),
+                                    HOUSE_SOLAR_WIND.get()
+                            )
+                            .rightClickHotbar(
+                                    STAND_BREATH.get(),
+                                    HOUSE_BLOCK.get()
+                            )
+                            .defaultStats(StandStats.class, new StandStats.Builder()
+                                    .tier(4)
+                                    .power(13.0)
+                                    .speed(13.0)
+                                    .range(3.0,15)
+                                    .durability(8.0)
+                                    .precision(8.0)
+                                    .randomWeight(2)
+                            )
+                            .addOst(InitSounds.GOOFY_GOOBER_OST)
+                            .addSummonShout(InitSounds.GOOFY_GOOBER_STAND)
+                            .build(),
+
+                    InitEntities.ENTITIES,
+                    () -> new StandEntityType<HouseOfEarthEntity>(HouseOfEarthEntity::new, 0.7F, 2.1F)
+                            .summonSound(InitSounds.HOUSE_OF_EARTH_SUMMON)
+                            .unsummonSound(InitSounds.HOUSE_OF_EARTH_UNSUMMON))
+                    .withDefaultStandAttributes();
+
 }

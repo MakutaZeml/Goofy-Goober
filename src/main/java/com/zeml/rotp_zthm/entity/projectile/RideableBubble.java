@@ -65,7 +65,9 @@ public class RideableBubble extends BubblesEntity {
                     double dY = f* MathHelper.sin(-xRot*(float) Math.PI/180 );
                     double dZ = MathHelper.cos(-xRot*(float) Math.PI/180 ) *(MathHelper.cos(-yRot * ((float)Math.PI / 180F)) * f);
                     this.setDeltaMovement(dX,dY,dZ);
-
+                    if(power != null){
+                        power.setCooldownTimer(InitStands.RIDE_BUBBLE.get(), 60);
+                    }
                 }
 
             }

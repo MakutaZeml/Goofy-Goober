@@ -5,6 +5,7 @@ import com.github.standobyte.jojo.client.sound.StoppableEntityTickableSound;
 import com.github.standobyte.jojo.entity.stand.StandEntity;
 import com.zeml.rotp_zthm.ExtraHamonStandsAddon;
 import net.minecraft.client.Minecraft;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvent;
 import net.minecraftforge.api.distmarker.Dist;
@@ -24,6 +25,26 @@ public class ModClientTickingSoundsHelper {
 
         SoundCategory category = stand.getSoundSource();
         PlaySoundAtEntityEvent event = ForgeEventFactory.onPlaySoundAtEntity(stand, sound, category, volume, pitch);
+        if (event.isCanceled() || event.getSound() == null) return;
+        sound = event.getSound();
+        category = event.getCategory();
+        volume = event.getVolume();
+        pitch = event.getPitch();
+
+        mc.getSoundManager().play(new StoppableEntityTickableSound<StandEntity>(sound, category, volume, pitch, looping, stand, e ->
+                e.getCurrentTaskAction() == action && (phase == null || e.getCurrentTaskPhase().map(stPhase -> stPhase == phase).orElse(false))));
+    }
+
+    public static void playStandEntityCancelableActionSoundAtUser(StandEntity stand, SoundEvent sound,
+                                                            StandEntityAction action, @Nullable StandEntityAction.Phase phase, float volume, float pitch, boolean looping) {
+        Minecraft mc = Minecraft.getInstance();
+        LivingEntity at = stand;
+        SoundCategory category = stand.getSoundSource();
+        if(stand.getUser() != null){
+            at = stand.getUser();
+        }
+
+        PlaySoundAtEntityEvent event = ForgeEventFactory.onPlaySoundAtEntity(at, sound, category, volume, pitch);
         if (event.isCanceled() || event.getSound() == null) return;
         sound = event.getSound();
         category = event.getCategory();

@@ -6,10 +6,13 @@ import com.github.standobyte.jojo.action.stand.StandEntityAction;
 import com.github.standobyte.jojo.client.ClientUtil;
 import com.github.standobyte.jojo.client.playeranim.anim.ModPlayerAnimations;
 import com.github.standobyte.jojo.entity.stand.StandEntity;
+import com.github.standobyte.jojo.init.ModSounds;
 import com.github.standobyte.jojo.init.power.non_stand.ModPowers;
 import com.github.standobyte.jojo.power.impl.nonstand.INonStandPower;
 import com.github.standobyte.jojo.power.impl.stand.IStandPower;
 import com.zeml.rotp_zgfgb.client.sound.ModClientTickingSoundsHelper;
+import com.zeml.rotp_zthm.init.AddonStands;
+import com.zeml.rotp_zthm.init.InitStands;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.SoundEvent;
@@ -65,8 +68,16 @@ public class HamonBreath extends StandEntityAction {
     @Override
     protected void playSoundAtStand(World world, StandEntity standEntity, SoundEvent sound, IStandPower standPower, Phase phase) {
         if (world.isClientSide()) {
+            SoundEvent event = ModSounds.BREATH_DEFAULT.get();
+            if(standPower.getType() == InitStands.GOOFY_GOOBER.getStandType()){
+                event = ModSounds.BREATH_CAESAR.get();
+            }else if(standPower.getType() == InitStands.HOUSE_EARTH.getStandType()){
+                event = ModSounds.BREATH_LISA_LISA.get();
+            }
+
             if (canBeCanceled(standPower, standEntity, phase, null)) {
-                ModClientTickingSoundsHelper.playStandEntityCancelableActionSound(standEntity, sound, this, phase, 1.0F, 1.0F, false);
+                ModClientTickingSoundsHelper.playStandEntityCancelableActionSoundAtUser(standEntity, sound, this, phase, 1.0F, 1.0F, false);
+                ModClientTickingSoundsHelper.playStandEntityCancelableActionSoundAtUser(standEntity, event,this,phase,1F,1F, false);
             }
             else {
                 standEntity.playSound(sound, 1.0F, 1.0F, ClientUtil.getClientPlayer());

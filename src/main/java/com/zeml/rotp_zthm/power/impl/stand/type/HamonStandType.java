@@ -62,6 +62,7 @@ public class HamonStandType<T extends StandStats> extends EntityStandType<T> {
                         }
                         if(hamon.isSkillLearned(ModHamonSkills.BUBBLE_LAUNCHER.get())) power.unlockAction(InitStands.BUBBLE_LAUNCHER.get());
                     }
+                    //------------------HOUSE OF EARTH--------------------
 
 
                 }
@@ -98,6 +99,7 @@ public class HamonStandType<T extends StandStats> extends EntityStandType<T> {
                         return hamonData.isSkillLearned(ModHamonSkills.BUBBLE_CUTTER.get());
                     }
                 }
+
 
             }
             return false;

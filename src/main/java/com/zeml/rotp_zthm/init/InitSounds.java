@@ -12,6 +12,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class InitSounds {
     public static final DeferredRegister<SoundEvent> SOUNDS = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, ExtraHamonStandsAddon.MOD_ID);
 
+    // ======================================== Goofy Goober ========================================
+
     public static final RegistryObject<SoundEvent> GOOFY_GOOBER_SUMMON = SOUNDS.register("summon_gg",
             ()->new SoundEvent(new ResourceLocation(ExtraHamonStandsAddon.MOD_ID,"summon_gg")));
 
@@ -26,7 +28,16 @@ public class InitSounds {
             ()->new SoundEvent(new ResourceLocation(ExtraHamonStandsAddon.MOD_ID, "user_item_stand"))
             );
 
+    public static final RegistryObject<SoundEvent> HOUSE_OF_EARTH_SUMMON = SOUNDS.register("summon_hoe",
+            ()->new SoundEvent(new ResourceLocation(ExtraHamonStandsAddon.MOD_ID,"summon_hoe")));
 
+    public static final RegistryObject<SoundEvent> HOUSE_OF_EARTH_UNSUMMON = SOUNDS.register("unsummon_hoe",
+            ()->new SoundEvent(new ResourceLocation(ExtraHamonStandsAddon.MOD_ID,"unsummon_hoe")));
 
     static final OstSoundList GOOFY_GOOBER_OST = new OstSoundList(new ResourceLocation(ExtraHamonStandsAddon.MOD_ID, "goofy_goober_ost"), SOUNDS);
+
+    // ======================================== House of Earth ========================================
+
+
+
 }
